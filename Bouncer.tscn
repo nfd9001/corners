@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Bouncer.gd" type="Script" id=1]
+
+[node name="Bouncer" type="KinematicBody2D"]
+collision_mask = 3
+script = ExtResource( 1 )
+velocity = 101.0
+
+[node name="BouncerCollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -3.9, -3.9 )
+polygon = PoolVector2Array( 3.9, 3.9, 67.9, 3.9, 67.9, 67.9, 3.9, 67.9 )
+
+[node name="BouncerPoly" type="Polygon2D" parent="."]
+color = Color( 0.176471, 0.454902, 0.843137, 1 )
+polygon = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
